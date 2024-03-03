@@ -1,4 +1,4 @@
-import { Signup } from "./routes/signup"
+import { Signup } from "./routes/Signup"
 import {useNavigate,BrowserRouter,Routes,Route} from 'react-router-dom'
 import {Suspense, lazy} from 'react'
 import { Signin } from "./routes/Signin"
