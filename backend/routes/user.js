@@ -12,6 +12,7 @@ const { account } = require("../db");
 const app= express();
 
 const cors=require('cors')
+app.use(express.json())
 app.use(cors());
 
 const userCreden=zod.object({
