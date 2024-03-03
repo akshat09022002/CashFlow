@@ -18,7 +18,7 @@ const userCreden=zod.object({
     firstName: zod.string(),
     lastName: zod.string(),
     username: zod.string().email(),
-    password: zod.string()
+    password: zod.string().min(6)
 })
 
 const loginCreden=zod.object({
