@@ -3,12 +3,6 @@ const { account } = require('../db');
 const { authMiddleware } = require('../middleware');
 const mongoose=require('mongoose');
 const app = express();
-const cors=require('cors')
-
-app.use(cors({
-    origin: 'http://cashflow.chomdu.lol'
-  }));
-app.use(express.json());
 
 const router= express.Router();
 

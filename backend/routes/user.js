@@ -11,11 +11,8 @@ const { authMiddleware } = require("../middleware");
 const { account } = require("../db");
 const app= express();
 
-const cors=require('cors')
 app.use(express.json())
-app.use(cors({
-    origin: 'http://cashflow.chomdu.lol'
-  }));
+
 
 const userCreden=zod.object({
     firstName: zod.string(),
