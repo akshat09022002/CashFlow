@@ -9,6 +9,8 @@ const { JWT_SECRET } = require("../config");
 const { login, signup } = require("../mongoose");
 const { authMiddleware } = require("../middleware");
 const { account } = require("../db");
+const cors=require('cors')
+app.use(cors());
 
 const userCreden=zod.object({
     firstName: zod.string(),
