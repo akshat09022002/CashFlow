@@ -17,7 +17,7 @@ export function Payments(){
         }} className="pl-2 mb-2 w-[30%] h-[40px] border-solid border-2 border-black" type="text" placeholder="Enter Amount"></input>
         
         <button className="bg-sky-500 rounded-md w-20 h-10" onClick={async ()=>{
-            await fetch('http://localhost:3000/api/v1/account/transfer',{
+            await fetch('http://cashflowbe.chomdu.lol/api/v1/account/transfer',{
                 method: "POST",
                 body: JSON.stringify({
                     "to" : localStorage.getItem("to"),

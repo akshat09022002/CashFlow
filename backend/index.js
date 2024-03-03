@@ -14,8 +14,5 @@ const { accountRouter } = require("./routes/account");
 app.use('/api/v1/user',userRoute);
 app.use('/api/v1/account',accountRouter);
 
-
-
-
 app.listen(3000);
 

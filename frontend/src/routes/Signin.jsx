@@ -22,7 +22,7 @@ export function Signin(){
             setPassword(value);
         }} className="pl-2 mb-2 w-[30%] h-[40px] border-solid border-2 border-black" type="password" placeholder="Password"></input>
         <button className="bg-sky-500 rounded-md w-20 h-10" onClick={async ()=>{
-            await fetch('http://localhost:3000/api/v1/user/signin',{
+            await fetch('http://cashflowbe.chomdu.lol/api/v1/user/signin',{
                 method: "POST",
                 body: JSON.stringify({
                     username:username,

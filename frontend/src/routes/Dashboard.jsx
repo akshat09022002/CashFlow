@@ -14,12 +14,12 @@ export function Dashboard(){
     const storedToken = localStorage.getItem("token");
 
     useEffect(()=>{
-        fetch(`http://localhost:3000/api/v1/user/bulk`).then(async(response)=>{
+        fetch(`http://cashflowbe.chomdu.lol/api/v1/user/bulk`).then(async(response)=>{
             const data=await response.json();
             setUser(data.user);
         });
 
-        fetch('http://localhost:3000/api/v1/account/balance',{
+        fetch('http://cashflowbe.chomdu.lol/api/v1/account/balance',{
             headers:{
                 "Content-type": "application/json",
                 "authorization":storedToken
@@ -30,7 +30,7 @@ export function Dashboard(){
         })
 
         setInterval(async()=>{
-            await fetch('http://localhost:3000/api/v1/account/balance',{
+            await fetch('http://cashflowbe.chomdu.lol/api/v1/account/balance',{
             headers:{
                 "Content-type": "application/json",
                 "authorization":storedToken
@@ -63,7 +63,7 @@ export function Dashboard(){
         <div className="mx-6 pt-2">
             <input onChange={async (e)=>{
             const value=e.target.value;
-            await fetch(`http://localhost:3000/api/v1/user/bulk?filter=${value}`).then(async(response)=>{
+            await fetch(`http://cashflowbe.chomdu.lol/api/v1/user/bulk?filter=${value}`).then(async(response)=>{
                 const data=await response.json();
                 setUser(data.user);
             })
