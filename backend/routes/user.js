@@ -9,6 +9,8 @@ const { JWT_SECRET } = require("../config");
 const { login, signup } = require("../mongoose");
 const { authMiddleware } = require("../middleware");
 const { account } = require("../db");
+const app= express();
+
 const cors=require('cors')
 app.use(cors());
 
