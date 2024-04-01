@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
+const { CONNECTION_URL } = require("./config");
 
-mongoose.connect('mongodb+srv://akshatkindle:Aisehi%401234@akbase.zt293q8.mongodb.net/paytm');
-
+mongoose.connect(CONNECTION_URL)
 const signupSchema= mongoose.Schema({
     firstName:String,
     lastName:String,

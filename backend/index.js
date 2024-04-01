@@ -4,10 +4,7 @@ const app=express()
 app.use(express.json());
 
 const cors=require('cors')
-app.use(cors({
-    origin: 'http://cashflow.chomdu.lol',
-    credentials: true
-  }));
+app.use(cors());
 
 
 const jwt=require("jsonwebtoken");
